@@ -55,7 +55,7 @@ describe Calculator do
       expect(c.divide(7.5,2)).to be_within(0.5).of(4)
     end
     it 'raises an error for divide by zero' do
-      expect(c.divide(4,0)).to raise_error(ArgumentError)
+      expect{(c.divide(4,0))}.to raise_error(ArgumentError)
     end
   end
 
@@ -79,7 +79,7 @@ describe Calculator do
       expect(c.sqrt(12.5)).to be_within(0.5).of(3.5)
     end
     it 'raises an error for negative numbers' do
-      expect(c.sqrt(-2)).to raise_error(ArgumentError)
+      expect{(c.sqrt(-2))}.to raise_error(ArgumentError)
     end
   end
 
